@@ -1,0 +1,819 @@
+@def color-rosewater  #f5e0dc;
+@def color-flamingo #f2cdcd;
+@def color-pink #f5c2e7;
+@def color-mauve  #cba6f7;
+@def color-red  #f38ba8;
+@def color-maroon #eba0ac;
+@def color-peach  #fab387;
+@def color-yellow #f9e2af;
+@def color-green  #a6e3a1;
+@def color-teal #94e2d5;
+@def color-sky  #89dceb;
+@def color-sapphire #74c7ec;
+@def color-blue #89b4fa;
+@def color-lavender #b4befe;
+@def color-text #cdd6f4;
+@def color-subtext1 #bac2de;
+@def color-subtext0 #a6adc8;
+@def color-overlay2 #9399b2;
+@def color-overlay1 #7f849c;
+@def color-overlay0 #6c7086;
+@def color-surface2 #585b70;
+@def color-surface1 #45475a;
+@def color-surface0 #313244;
+@def color-base #1e1e2e;
+@def color-mantle #181825;
+@def color-crust  #11111b;
+
+DockWidgetTitle
+{
+    padding: 0px;
+    margin-bottom: 2px;
+}
+
+DockWidgetTitle,
+DockAreaDragTitle
+{
+    border: none;
+}
+
+
+DockAreaDragTitle
+{
+    background-color:${color-text}; /*palette(dark);*/
+}
+
+DockWidgetTitle[active="true"]
+{
+    background-color: ${color-base};
+}
+
+DockWidgetTitle > QPushButton,
+DockAreaDragTitle > QPushButton
+{
+    min-width: 20px;
+    min-height: 20px;
+}
+
+DockWidgetTitle > QPushButton:!hover,
+DockAreaDragTitle > QPushButton:!hover
+{
+    border: none;
+}
+
+/* Close, maximize and undock button for dock widgets */
+DockWidget > QWidget > QAbstractButton
+{
+    background-color: ${color-crust};
+    border-radius: 3px;
+}
+
+chooser_widget_t,
+standalone_dirtree_widget_t
+{
+    qproperty-highlight-bg-default: ${color-red};
+    qproperty-highlight-bg-selected: ${color-teal};
+
+    qproperty-cut-text-color-default : ${color-surface0};
+    qproperty-cut-text-color-selected :${color-text};
+}
+
+chooser_widget_t[os-dark-theme="true"],
+standalone_dirtree_widget_t[os-dark-theme="true"]
+{
+    qproperty-highlight-bg-default: ${color-red};
+    qproperty-highlight-bg-selected: ${color-pink};
+
+    qproperty-cut-text-color-default : ${color-subtext1};
+    qproperty-cut-text-color-selected :${color-text};
+}
+
+log_widget_t
+{
+    color            :${color-text};
+    background-color : ${color-base};
+}
+
+log_widget_t[os-dark-theme="true"]
+{
+    color:${color-text};
+    background-color: ${color-base};
+}
+
+text_area_t
+{
+    qproperty-keyword1-fg: ${color-mauve};
+    qproperty-keyword1-weight: 0;
+    qproperty-keyword1-italic: 0;
+
+    qproperty-keyword2-fg: ${color-mauve};
+    qproperty-keyword2-weight: 0;
+    qproperty-keyword2-italic: 0;
+
+    qproperty-keyword3-fg: ${color-mauve};
+    qproperty-keyword3-weight: 0;
+    qproperty-keyword3-italic: 0;
+
+    qproperty-string-fg: ${color-green};
+    qproperty-string-weight: 0;
+    qproperty-string-italic: 0;
+
+    qproperty-comment-fg: ${color-overlay0};
+    qproperty-comment-weight: 0;
+    qproperty-comment-italic: 1;
+
+    qproperty-preprocessor-fg: ${color-sky};
+    qproperty-preprocessor-weight: 1;
+    qproperty-preprocessor-italic: 0;
+
+    qproperty-number-fg: ${color-peach};
+    qproperty-number-weight: 1;
+    qproperty-number-italic: 0;
+}
+
+text_area_t QWidget
+{
+    background-color: transparent;
+}
+
+text_area_t text_area_margin_widget_t
+{
+    color:${color-text};
+    qproperty-header-color:${color-text};
+}
+
+text_area_dialog_t QLabel#counter_label
+{
+    color:${color-text};
+}
+
+text_area_dialog_t QLabel#counter_label[invalid=true]
+{
+    color: ${color-red};
+}
+
+@def darkening 125;
+@def lightening 125;
+
+@def diff_region_pick   ${color-green}; /* light green */
+@def diff_region_pick_l @lighten(${diff_region_pick}, ${lightening});
+@def diff_region_pick_d @darken(${diff_region_pick}, ${darkening});
+
+@def diff_region_leave   ${color-subtext1};
+@def diff_region_leave_l @lighten(${diff_region_leave}, ${lightening});
+@def diff_region_leave_d @darken(${diff_region_leave}, ${darkening});
+
+@def diff_region_conflict   ${color-yellow}; /* light orange/red */
+@def diff_region_conflict_l @lighten(${diff_region_conflict}, ${lightening});
+@def diff_region_conflict_d @darken(${diff_region_conflict}, ${darkening});
+
+/* make that guy behave as if it were a regular widget, by killing the default QGroupBox spacing */
+LabeledWidgetContainer
+{
+    border: 0;
+    padding: 0;
+}
+
+QSplitter::handle:horizontal
+{
+    width: 4px;
+}
+
+QSplitter::handle:vertical
+{
+    height: 4px;
+}
+
+ActionsInspector QLineEdit
+{
+    width: 16em;
+}
+
+ActionsInspector QKeySequenceEdit
+{
+    width: 16em;
+}
+
+/* start dark*/
+
+QWidget
+{
+    background-color: ${color-crust};
+    color: ${color-text};
+}
+
+QTextEdit,
+QPlainTextEdit
+{
+    background-color: ${color-mantle};
+    border: 1px solid ${color-base};
+    border-radius: 2px;
+}
+
+QMenu
+{
+    border: 1px solid ${color-mantle};
+}
+
+QMenuBar,
+QMenuBar::item
+{
+    background-color: ${color-base};
+    color: ${color-text};
+}
+
+QMenu::item:selected
+{
+      background-color: ${color-mantle};
+}
+
+QMenu::item:disabled
+{
+    color: ${color-subtext1};
+}
+
+QLineEdit
+{
+    border: 1px solid ${color-subtext1};
+    min-height: 20px;
+    border-radius: 2px;
+}
+
+QLineEdit:hover,
+QLineEdit:focus
+{
+    border: 1px solid ${color-teal};
+}
+
+QTabBar::tab
+{
+    background-color: ${color-surface1};
+}
+
+QTabBar::tab:selected
+{
+    background-color: ${color-surface0};
+}
+
+QTableView
+{
+    border: 1px solid ${color-base};
+    background-color: ${color-mantle};
+}
+
+QHeaderView::section
+{
+    background-color: ${color-mantle};
+    border: none;
+    border-left: 1px solid ${color-base};
+    border-right: 1px solid ${color-crust};
+    padding: 3px;
+}
+
+QHeaderView:horizontal::section
+{
+    min-height: 20px;
+}
+
+QHeaderView:vertical::section
+{
+}
+
+QTableCornerButton::section
+{
+    background: ${color-crust};
+    border: 2px outset ${color-crust};
+}
+
+QScrollBar
+{
+    background-color: ${color-surface0};
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 0;
+}
+
+QScrollBar::sub-line,
+QScrollBar::add-line
+{
+    width: 0;
+    height: 0;
+}
+
+QScrollBar::add-page,
+QScrollBar::sub-page
+{
+    background: none;
+}
+
+QScrollBar::handle:vertical
+{
+    min-height: 20px;
+}
+
+QScrollBar::handle:horizontal
+{
+    min-width: 20px;
+}
+
+QScrollBar::handle
+{
+    background-color: ${color-surface2};
+    margin: 3px;
+    border-radius: 7px;
+}
+
+QToolBar
+{
+    border: none;
+}
+
+QPushButton
+{
+    border: 1px solid ${color-sapphire};
+    text-align: center;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 6px 0 6px;
+    border-radius: 2px;
+}
+
+quick_filter_widget_t > QPushButton
+{
+    min-width: 20px;
+}
+
+QPushButton:hover,
+QPushButton:default
+{
+    border: 1px solid ${color-teal};
+}
+
+QPushButton:pressed
+{
+    border: 1px solid ${color-sky};
+}
+
+/* it seems Qt doesn't account for the checkmark icon when calculating the width
+ * of a combobox menu in dark mode on macOS and linux. we should add it to the margins
+ * so that text isn't clipped */
+@ifndef __NT__
+@def combobox_right_margin 20px;
+@else
+@def combobox_right_margin 0px;
+@endif
+
+QComboBox
+{
+    border: 1px solid ${color-base};
+    border-radius: 2px;
+    color: ${color-text};
+    /*  KLUDGE: https://stackoverflow.com/questions/24447276/qcombobox-text-colour-wont-change-with-style-sheet */
+    padding: 1px ${combobox_right_margin} 1px 3px;
+}
+
+QComboBox > QLineEdit,
+QComboBox > QLineEdit:hover,
+QComboBox > QLineEdit:focus
+{
+    border: none;
+    min-height: default;
+}
+
+QComboBox:hover,
+QComboBox:focus
+{
+    border: 1px solid ${color-teal};
+}
+
+QComboBox::drop-down
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: ${color-overlay0};
+    border-left-style: solid;
+}
+
+/* The 'menu' of a QComboBox */
+QComboBox QAbstractItemView
+{
+    border: 1px solid ${color-mantle};
+}
+
+QComboBox:!editable
+{
+    background-color: ${color-surface0};
+}
+
+QComboBox::down-arrow
+{
+    image: url("$RELPATH/icons/expand.png");
+}
+
+QLabel
+{
+    background: transparent;
+}
+
+QStatusBar QLabel
+{
+    border: none;
+}
+
+QStatusBar::item
+{
+    border: 1px solid ${color-surface0};
+    border-radius: 2px;
+}
+
+EditContainer,
+ChooserContainer,
+QGroupBox,
+QListView,
+QTreeView
+{
+    border: 1px solid ${color-surface0};
+    border-radius: 2px;
+}
+
+QGroupBox
+{
+    margin-top: 5px;
+}
+
+QGroupBox::title
+{
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+}
+
+/* Use default selection color on macOS, it matches the native dark theme */
+@ifndef __MAC__
+
+QTreeView::item:selected,
+QListView::item:selected,
+QTableView::item:selected,
+QTreeView::branch:selected
+{
+    background-color: ${color-base};
+    color: ${color-text};
+}
+
+@endif
+
+QToolTip,
+QTipLabel
+{
+    border: 1px solid ${color-teal};
+    border-radius: 2px;
+    background: ${color-crust};
+    color: ${color-text};
+    margin: 0;
+    padding: 0;
+}
+@def dark_highlight_color rgba(96, 00, 96, 0.80);
+
+TNavBand > QPushButton,
+nav_scroll_button_t,
+RegJumpButton
+{
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Remove border from IDC/Python switch button */
+CLIWidget > QGroupBox > QPushButton,
+CLIWidget > QGroupBox > QPushButton:hover,
+CLIWidget > QGroupBox > QPushButton:focus
+{
+    border: none;
+}
+
+CLIWidget > QGroupBox
+{
+    margin-top: 0;
+}
+/*end dark*/
+
+CustomIDAMemo
+{
+    /* misc */
+    qproperty-line-fg-patched-bytes     : ${color-maroon}; /* patched bytes (brown-ish) */
+    qproperty-line-fg-unsaved-changes   : ${color-peach}; /* unsaved changes (orange-ish) */
+    qproperty-line-bg-highlight         : ${color-red}; /* highlighting background */
+    qproperty-line-bg-highlight-2       : ${color-rosewater};/* highlighting background #2 */
+    qproperty-line-bg-highlight-3       : ${color-pink};/* highlighting background #3 */
+    qproperty-line-bg-highlight-4       : ${color-teal};/* highlighting background #4 */
+    qproperty-line-bg-highlight-5       : ${color-maroon};/* highlighting background #5 */
+    qproperty-line-bg-highlight-6       : ${color-green};/* highlighting background #6 */
+    qproperty-line-bg-highlight-7       : ${color-sapphire};/* highlighting background #7 */
+    qproperty-line-bg-highlight-8       : ${color-subtext0};/* highlighting background #8 */
+    qproperty-caret                     : ${color-text}; /* Caret (cursor) */
+    qproperty-line-pfx-current-item     : ${color-subtext0};/* Line prefix: Current item (transparent by default) */
+    qproperty-line-bgovl-current-line   : ${color-overlay1};/* current line background overlay */
+    qproperty-line-bgovl-trace          : ${color-overlay2};/* Trace line background overlay */
+    qproperty-line-bgovl-trace-ovl      : ${color-surface2};/* Second trace line background overlay */
+    qproperty-line-bgovl-extra-1        : ${color-sapphire};/* Extra background overlay #1 */
+    qproperty-line-bgovl-extra-2        : ${color-base};/* Extra background overlay #2 */
+    qproperty-line-bgovl-extra-3        : ${color-yellow};/* Extra background overlay #3 */
+    qproperty-line-bgovl-extra-4        : ${color-rosewater};/* Extra background overlay #4 */
+    qproperty-line-bgovl-extra-5        : ${color-peach};/* Extra background overlay #5 */
+    qproperty-line-bgovl-extra-6        : ${color-sky};/* Extra background overlay #6 */
+    qproperty-line-bgovl-extra-7        : ${color-green};/* Extra background overlay #7 */
+    qproperty-line-bgovl-extra-8        : ${color-subtext1};/* Extra background overlay #8 */
+    qproperty-line-bgovl-extra-9        : ${color-pink};/* Extra background overlay #9 */
+    qproperty-line-bgovl-extra-10       : ${color-teal};/* Extra background overlay #10 */
+    qproperty-line-bgovl-extra-11       : ${color-pink};/* Extra background overlay #11 */
+    qproperty-line-bgovl-extra-12       : ${color-yellow};/* Extra background overlay #12 */
+    qproperty-line-bgovl-extra-13       : ${color-base};/* Extra background overlay #13 */
+    qproperty-line-bgovl-extra-14       : ${color-subtext0};/* Extra background overlay #14 */
+    qproperty-line-bgovl-extra-15       : ${color-crust};/* Extra background overlay #15 */
+    qproperty-line-bgovl-extra-16       : ${color-green};/* Extra background overlay #16 */
+
+    /* graph */
+    qproperty-graph-bg-top              : ${color-base};
+    qproperty-graph-bg-bottom           : ${color-base};
+    qproperty-graph-node-title-normal   : ${color-base};
+    qproperty-graph-node-title-selected : ${color-sapphire};
+    qproperty-graph-node-title-current  : ${color-surface2};
+    qproperty-graph-node-frame-group    : ${color-yellow};
+    qproperty-graph-node-shadow         : ${color-text};
+    qproperty-graph-node-high1          : ${color-surface1};
+    qproperty-graph-node-high2          : ${color-surface1};
+    qproperty-graph-node-foreign        : ${color-red};
+    qproperty-graph-edge-normal         : ${color-sapphire};
+    qproperty-graph-edge-yes            : ${color-green};
+    qproperty-graph-edge-no             : ${color-red};
+    qproperty-graph-edge-high           : ${color-mauve};
+    qproperty-graph-edge-current        : ${color-sky};
+
+    /* bpts */
+    qproperty-line-bg-bpt-enabled        : ${color-red};
+    qproperty-line-bg-bpt-disabled       : ${color-yellow};
+    qproperty-line-bg-bpt-unavailable    : ${color-peach};
+
+    /* diff/merge */
+    qproperty-line-bgovl-diff-region-pick:             ${diff_region_pick_l};
+    qproperty-line-bgovl-diff-region-leave:            ${diff_region_leave_l};
+    qproperty-line-bgovl-diff-region-conflict:         ${diff_region_conflict_l};
+
+    qproperty-line-bgovl-diff-region-pick-current:     ${diff_region_pick};
+    qproperty-line-bgovl-diff-region-leave-current:    ${diff_region_leave};
+    qproperty-line-bgovl-diff-region-conflict-current: ${diff_region_conflict};
+
+    /* bookmarks */
+    qproperty-line-bgovl-bookmark:      ${color-surface1};
+    qproperty-bookmark-star-outline:    ${color-sapphire};
+}
+
+CustomIDAMemo[debugging="true"]
+{
+    qproperty-line-bg-default            : ${color-mantle};
+    qproperty-line-bgovl-current-ip      : ${color-sapphire};
+}
+
+CustomIDAMemo[hints="true"]
+{
+    qproperty-line-bg-default            : ${color-mantle};         /* hints background (pale yellow) */
+}
+
+TextArrows
+{
+    qproperty-jump-in-function          : ${color-subtext0};
+    qproperty-jump-external-to-function : ${color-red};
+    qproperty-jump-under-cursor         : ${color-text};
+    qproperty-jump-target               : ${color-green};
+    qproperty-register-target           : ${color-sapphire};
+    qproperty-bpt-possible              : ${color-sapphire};
+}
+
+TCpuRegs
+{
+    background-color: ${color-crust};
+    qproperty-register-defined:${color-text};
+    qproperty-register-changed: ${color-sapphire};
+    qproperty-register-edited: ${color-mauve};
+    qproperty-register-unavailable: ${color-subtext0};
+}
+
+TCpuRegs QPushButton
+{
+    background: transparent;
+}
+
+TCpuRegs ui_label_t
+{
+    color: ${color-sapphire};
+}
+
+TCpuRegs[os-dark-theme="true"]
+{
+    background-color:${color-text};
+    qproperty-register-defined: ${color-base};
+    qproperty-register-changed: ${color-yellow};
+    qproperty-register-edited: ${color-peach};
+    qproperty-register-unavailable: ${color-subtext0};
+}
+
+TCpuRegs ui_label_t[os-dark-theme="true"]
+{
+    color:${color-text};
+}
+
+navband_t
+{
+    qproperty-lib-function : ${color-teal};
+    qproperty-function : ${color-sky};
+    qproperty-code : ${color-rosewater};
+    qproperty-data : ${color-subtext0};
+    qproperty-undefined : ${color-yellow};
+    qproperty-extern : ${color-pink};
+    qproperty-lumina-function : ${color-green};
+
+    qproperty-hl-lib-function : ${color-sapphire};
+    qproperty-hl-function : ${color-sky};
+    qproperty-hl-code : ${color-rosewater};
+    qproperty-hl-data : ${color-flamingo};
+    qproperty-hl-undefined : ${color-teal};
+    qproperty-hl-extern : #7287fd;
+    qproperty-hl-lumina-function : ${color-green};
+
+    qproperty-hl-outline : ${color-pink};
+
+    qproperty-error : ${color-maroon};
+    qproperty-gap :${color-text};
+    qproperty-cursor : ${color-yellow};
+    qproperty-auto-analysis-cursor : ${color-peach};
+}
+
+navband_t[os-dark-theme="true"]
+{
+    qproperty-lib-function: ${color-teal};
+    qproperty-function: ${color-peach};
+    qproperty-code: ${color-red};
+    qproperty-data: ${color-subtext0};
+    qproperty-undefined: ${color-green};
+    qproperty-extern: ${color-maroon};
+    qproperty-lumina-function: ${color-green};
+
+    qproperty-hl-lib-function: ${color-sapphire};
+    qproperty-hl-function: ${color-peach};
+    qproperty-hl-code: ${color-red};
+    qproperty-hl-data: ${color-crust};
+    qproperty-hl-undefined: ${color-yellow};
+    qproperty-hl-extern: ${color-pink};
+    qproperty-hl-lumina-function: ${color-green};
+
+    qproperty-hl-outline : ${color-sky};
+
+    qproperty-error: ${color-red};
+    qproperty-gap:${color-text};
+    qproperty-cursor: ${color-green};
+    qproperty-auto-analysis-cursor: ${color-peach};
+}
+
+TChooser,
+generic_dirtree_widget_t
+{
+    qproperty-highlight-bg-diff-region-pick:             ${diff_region_pick_l};
+    qproperty-highlight-bg-diff-region-leave:            ${diff_region_leave_l};
+    qproperty-highlight-bg-diff-region-conflict:         ${diff_region_conflict_l};
+
+    qproperty-highlight-bg-diff-region-pick-current:     ${diff_region_pick};
+    qproperty-highlight-bg-diff-region-leave-current:    ${diff_region_leave};
+    qproperty-highlight-bg-diff-region-conflict-current: ${diff_region_conflict};
+}
+
+diff_fringe_t
+{
+    background-color: ${color-base};
+
+    qproperty-diff-region-pick:                             ${diff_region_pick_l};
+    qproperty-diff-region-pick-boundaries:                  ${diff_region_pick_l};
+    qproperty-diff-region-pick-current:                     ${diff_region_pick};
+    qproperty-diff-region-pick-current-boundaries:          ${diff_region_pick_d};
+
+    qproperty-diff-region-leave:                            ${diff_region_leave_l};
+    qproperty-diff-region-leave-boundaries:                 ${diff_region_leave_l};
+    qproperty-diff-region-leave-current:                    ${diff_region_leave};
+    qproperty-diff-region-leave-current-boundaries:         ${diff_region_leave_d};
+
+    qproperty-diff-region-conflict:                         ${diff_region_conflict_l};
+    qproperty-diff-region-conflict-boundaries:              ${diff_region_conflict_l};
+    qproperty-diff-region-conflict-current:                 ${diff_region_conflict};
+    qproperty-diff-region-conflict-current-boundaries:      ${diff_region_conflict_d};
+}
+
+/* Source syntax */
+TextEdit {
+  qproperty-keyword1-fg: ${color-mauve};
+  qproperty-keyword1-weight: 0;
+  qproperty-keyword1-italic: 0;
+  qproperty-keyword2-fg: ${color-mauve};
+  qproperty-keyword2-weight: 0;
+  qproperty-keyword2-italic: 0;
+  qproperty-keyword3-fg: ${color-mauve};
+  qproperty-string-fg: ${color-green};
+  qproperty-comment-fg: ${color-overlay0};
+  qproperty-comment-weight: 0;
+  qproperty-comment-italic: 0;
+  qproperty-preprocessor-fg: ${color-sky};
+  qproperty-preprocessor-weight: 0;
+  qproperty-preprocessor-italic: 0;
+  qproperty-number-fg: ${color-peach};
+  property-number-weight: 0;
+  property-number-italic: 0;
+}
+/* main color scheme */
+CustomIDAMemo {
+  /* current line background overlay */
+  qproperty-line-bgovl-current-line: rgba(220, 138, 120, 0.25); /*rosewater*/
+  qproperty-line-fg-default: ${color-sapphire};
+  qproperty-line-fg-regular-comment: ${color-overlay0};
+  qproperty-line-fg-repeatable-comment: ${color-overlay0};
+  qproperty-line-fg-automatic-comment: ${color-overlay0};
+  qproperty-line-fg-insn: ${color-red};
+  qproperty-line-fg-dummy-data-name: ${color-red};
+  qproperty-line-fg-regular-data-name: ${color-peach};
+  qproperty-line-fg-demangled-name: ${color-peach};
+  qproperty-line-fg-punctuation: ${color-sapphire};
+  qproperty-line-fg-charlit-in-insn: ${color-green};
+  qproperty-line-fg-strlit-in-insn: ${color-green};
+  qproperty-line-fg-numlit-in-insn: ${color-peach};
+  qproperty-line-fg-void-opnd: ${color-mauve};
+  qproperty-line-fg-code-xref: ${color-overlay0};
+  qproperty-line-fg-data-xref: ${color-yellow};
+  qproperty-line-fg-code-xref-to-tail: ${color-mauve};
+  qproperty-line-fg-data-xref-to-tail: ${color-peach};
+  qproperty-line-fg-error: ${color-red};
+  qproperty-line-fg-line-prefix: ${color-teal};
+  qproperty-line-fg-opcode-byte: ${color-peach};
+  qproperty-line-fg-extra-line: ${color-peach};
+  qproperty-line-fg-alt-opnd: ${color-red};
+  qproperty-line-fg-hidden: ${color-overlay0};
+  qproperty-line-fg-libfunc: ${color-peach};
+  qproperty-line-fg-locvar: ${color-mauve};
+  qproperty-line-fg-dummy-code-name: ${color-text};
+  qproperty-line-fg-asm-directive: ${color-peach};
+  qproperty-line-fg-macro: ${color-text};
+  qproperty-line-fg-strlit-in-data: ${color-green};
+  qproperty-line-fg-charlit-in-data: ${color-green};
+  qproperty-line-fg-numlit-in-data: ${color-peach};
+  qproperty-line-fg-keyword: ${color-mauve};
+  qproperty-line-fg-register-name: ${color-yellow};
+  qproperty-line-fg-import-name: ${color-mauve};
+  qproperty-line-fg-segment-name: ${color-peach};
+  qproperty-line-fg-dummy-unknown-name: ${color-red};
+  qproperty-line-fg-code-name: ${color-peach};
+  qproperty-line-fg-unknown-name: ${color-yellow};
+  qproperty-line-fg-collapsed-line: ${color-mauve};
+  qproperty-line-bg-default: ${color-base};
+  qproperty-line-bg-selected: ${color-crust};
+  qproperty-line-pfx-libfunc: ${color-text};
+  qproperty-line-pfx-func: ${color-sapphire};
+  qproperty-line-pfx-insn: ${color-sky};
+  qproperty-line-pfx-data: ${color-peach};
+  qproperty-line-pfx-unexplored: ${color-maroon};
+  qproperty-line-pfx-extern: ${color-mauve};
+  qproperty-line-pfx-current-item: ${color-sapphire};
+  qproperty-line-pfx-current-line: ${color-teal};
+  qproperty-line-bg-bpt-enabled: ${color-teal};
+  qproperty-line-bg-bpt-disabled: ${color-text};
+  qproperty-line-bg-bpt-unavailable: ${color-overlay0};
+  qproperty-graph-bg-top: ${color-crust};
+  qproperty-graph-bg-bottom: ${color-crust};
+  qproperty-graph-node-title-normal: ${color-surface0};
+  qproperty-graph-node-title-selected: ${color-surface2};
+  qproperty-graph-node-title-current: ${color-surface1};
+  qproperty-graph-node-frame-group: ${color-peach};
+  qproperty-graph-node-shadow: ${color-surface2};
+  qproperty-graph-node-high1: ${color-sapphire};
+  qproperty-graph-node-high2: ${color-sky};
+  qproperty-graph-node-foreign: ${color-mauve};
+  qproperty-graph-edge-normal: ${color-peach};
+  qproperty-graph-edge-yes: ${color-green};
+  qproperty-graph-edge-no: ${color-red};
+  qproperty-graph-edge-high: ${color-surface1};
+  qproperty-graph-edge-current: ${color-text};
+  qproperty-line-fg-patched-bytes: ${color-mauve};
+  qproperty-line-fg-unsaved-changes: ${color-teal};
+  qproperty-line-bg-highlight: rgba(220, 138, 120, 0.5); /*rosewater*/
+  qproperty-line-bg-hint: ${color-mauve};
+}
+CustomIDAMemo[debugging="true"],
+CustomIDAMemo[hints="true"] {
+  qproperty-line-bg-default: ${color-base};
+}
+
+@ifdef __MAC__
+/* drawing borders on macOS seems to be glitchy with Qt 5.15.2. see IDA-3041 */
+DockWidgetTitle > QPushButton,
+DockAreaDragTitle > QPushButton {
+  border: none;
+}
+@endif;
