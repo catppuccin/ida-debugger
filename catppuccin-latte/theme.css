@@ -31,6 +31,13 @@ DockWidgetTitle
     margin-bottom: 2px;
 }
 
+DockWidgetTitle,
+DockAreaDragTitle
+{
+    border: none;
+}
+
+
 DockAreaDragTitle
 {
     background-color:${color-text}; /*palette(dark);*/
@@ -52,6 +59,13 @@ DockWidgetTitle > QPushButton:!hover,
 DockAreaDragTitle > QPushButton:!hover
 {
     border: none;
+}
+
+/* Close, maximize and undock button for dock widgets */
+DockWidget > QWidget > QAbstractButton
+{
+    background-color: ${color-crust};
+    border-radius: 3px;
 }
 
 chooser_widget_t,
@@ -117,6 +131,11 @@ text_area_t
     qproperty-number-italic: 0;
 }
 
+text_area_t QWidget
+{
+    background-color: transparent;
+}
+
 text_area_t text_area_margin_widget_t
 {
     color:${color-text};
@@ -174,6 +193,312 @@ ActionsInspector QKeySequenceEdit
 {
     width: 16em;
 }
+
+/* start dark*/
+
+QWidget
+{
+    background-color: ${color-crust};
+    color: ${color-text};
+}
+
+QTextEdit,
+QPlainTextEdit
+{
+    background-color: ${color-mantle};
+    border: 1px solid ${color-base};
+    border-radius: 2px;
+}
+
+QMenu
+{
+    border: 1px solid ${color-mantle};
+}
+
+QMenuBar,
+QMenuBar::item
+{
+    background-color: ${color-base};
+    color: ${color-text};
+}
+
+QMenu::item:selected
+{
+      background-color: ${color-mantle};
+}
+
+QMenu::item:disabled
+{
+    color: ${color-subtext1};
+}
+
+QLineEdit
+{
+    border: 1px solid ${color-subtext1};
+    min-height: 20px;
+    border-radius: 2px;
+}
+
+QLineEdit:hover,
+QLineEdit:focus
+{
+    border: 1px solid ${color-teal};
+}
+
+QTabBar::tab
+{
+    background-color: ${color-surface1};
+}
+
+QTabBar::tab:selected
+{
+    background-color: ${color-surface0};
+}
+
+QTableView
+{
+    border: 1px solid ${color-base};
+    background-color: ${color-mantle};
+}
+
+QHeaderView::section
+{
+    background-color: ${color-mantle};
+    border: none;
+    border-left: 1px solid ${color-base};
+    border-right: 1px solid ${color-crust};
+    padding: 3px;
+}
+
+QHeaderView:horizontal::section
+{
+    min-height: 20px;
+}
+
+QHeaderView:vertical::section
+{
+}
+
+QTableCornerButton::section
+{
+    background: ${color-crust};
+    border: 2px outset ${color-crust};
+}
+
+QScrollBar
+{
+    background-color: ${color-surface0};
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 0;
+}
+
+QScrollBar::sub-line,
+QScrollBar::add-line
+{
+    width: 0;
+    height: 0;
+}
+
+QScrollBar::add-page,
+QScrollBar::sub-page
+{
+    background: none;
+}
+
+QScrollBar::handle:vertical
+{
+    min-height: 20px;
+}
+
+QScrollBar::handle:horizontal
+{
+    min-width: 20px;
+}
+
+QScrollBar::handle
+{
+    background-color: ${color-surface2};
+    margin: 3px;
+    border-radius: 7px;
+}
+
+QToolBar
+{
+    border: none;
+}
+
+QPushButton
+{
+    border: 1px solid ${color-sapphire};
+    text-align: center;
+    min-height: 20px;
+    min-width: 50px;
+    padding: 0 6px 0 6px;
+    border-radius: 2px;
+}
+
+quick_filter_widget_t > QPushButton
+{
+    min-width: 20px;
+}
+
+QPushButton:hover,
+QPushButton:default
+{
+    border: 1px solid ${color-teal};
+}
+
+QPushButton:pressed
+{
+    border: 1px solid ${color-sky};
+}
+
+/* it seems Qt doesn't account for the checkmark icon when calculating the width
+ * of a combobox menu in dark mode on macOS and linux. we should add it to the margins
+ * so that text isn't clipped */
+@ifndef __NT__
+@def combobox_right_margin 20px;
+@else
+@def combobox_right_margin 0px;
+@endif
+
+QComboBox
+{
+    border: 1px solid ${color-base};
+    border-radius: 2px;
+    color: ${color-text};
+    /*  KLUDGE: https://stackoverflow.com/questions/24447276/qcombobox-text-colour-wont-change-with-style-sheet */
+    padding: 1px ${combobox_right_margin} 1px 3px;
+}
+
+QComboBox > QLineEdit,
+QComboBox > QLineEdit:hover,
+QComboBox > QLineEdit:focus
+{
+    border: none;
+    min-height: default;
+}
+
+QComboBox:hover,
+QComboBox:focus
+{
+    border: 1px solid ${color-teal};
+}
+
+QComboBox::drop-down
+{
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: ${color-overlay0};
+    border-left-style: solid;
+}
+
+/* The 'menu' of a QComboBox */
+QComboBox QAbstractItemView
+{
+    border: 1px solid ${color-mantle};
+}
+
+QComboBox:!editable
+{
+    background-color: ${color-surface0};
+}
+
+QComboBox::down-arrow
+{
+    image: url("$RELPATH/icons/expand.png");
+}
+
+QLabel
+{
+    background: transparent;
+}
+
+QStatusBar QLabel
+{
+    border: none;
+}
+
+QStatusBar::item
+{
+    border: 1px solid ${color-surface0};
+    border-radius: 2px;
+}
+
+EditContainer,
+ChooserContainer,
+QGroupBox,
+QListView,
+QTreeView
+{
+    border: 1px solid ${color-surface0};
+    border-radius: 2px;
+}
+
+QGroupBox
+{
+    margin-top: 5px;
+}
+
+QGroupBox::title
+{
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+}
+
+/* Use default selection color on macOS, it matches the native dark theme */
+@ifndef __MAC__
+
+QTreeView::item:selected,
+QListView::item:selected,
+QTableView::item:selected,
+QTreeView::branch:selected
+{
+    background-color: ${color-base};
+    color: ${color-text};
+}
+
+@endif
+
+QToolTip,
+QTipLabel
+{
+    border: 1px solid ${color-teal};
+    border-radius: 2px;
+    background: ${color-crust};
+    color: ${color-text};
+    margin: 0;
+    padding: 0;
+}
+@def dark_highlight_color rgba(96, 00, 96, 0.80);
+
+TNavBand > QPushButton,
+nav_scroll_button_t,
+RegJumpButton
+{
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Remove border from IDC/Python switch button */
+CLIWidget > QGroupBox > QPushButton,
+CLIWidget > QGroupBox > QPushButton:hover,
+CLIWidget > QGroupBox > QPushButton:focus
+{
+    border: none;
+}
+
+CLIWidget > QGroupBox
+{
+    margin-top: 0;
+}
+/*end dark*/
 
 CustomIDAMemo
 {
