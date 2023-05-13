@@ -1,7 +1,7 @@
 <h3 align="center">
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin for <a href="https://hex-rays.com/ida-pro/">IDA Pro</a>
+	Catppuccin for <a href="https://hex-rays.com/ida-pro/">IDA (Interactive Disassembler)</a>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
@@ -34,19 +34,41 @@
 <img src="assets/mocha.webp"/>
 </details>
 
-## Usage
+## 🔧 Usage
 
-1. Clone this repository locally
-2. Open the app's settings
-3. Select `import theme` and browse to where you cloned Catppuccin
-4. Select it
+1. **Download** the GitHub repository as a .zip file and unzip it. Alternatively, you can **clone** the repository using the following command in your terminal:
 
-<!-- this section is optional -->
+   ```bash
+   git clone https://github.com/ValentinTT/ida-debugger.git
+   ```
+
+2. **Move** the four `catppuccin-[flavour]` folders into the `/themes` folder inside IDA's installation folder.
+
+## 🔌 Activation
+
+1. **Open** IDA and navigate to `Options -> Colors... -> Current theme`.
+
+2. **Select** any of the four flavors of Catppuccin from the available themes.
 
 ## 🙋 FAQ
 
-- Q: **_"Where can I find the doc?"_**\
-  A: Run `:help theme`
+- Q: **_"Where can I find the `/themes` folder?"_**
+
+  - A: The location of the `/themes` folder depends on your operating system. Here are the default installation folder locations for IDA Pro:
+
+    - **Windows:**
+
+      - 32-bit version: `C:\Program Files\IDA-{version}\`
+      - 64-bit version: `C:\Program Files (x86)\IDA-{version}\`
+
+    - **Linux:**
+
+      - `/opt/ida-{version}/`
+
+    - **macOS:**
+      - `/Applications/IDA-{version}/`
+
+    Replace `{version}` with the specific version number of IDA Pro you have installed.
 
 ## 💝 Thanks to
 
