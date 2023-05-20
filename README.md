@@ -42,7 +42,9 @@
    git clone https://github.com/ValentinTT/ida-debugger.git
    ```
 
-2. **Move** the four `catppuccin-[flavour]` folders into the `/themes` folder inside IDA's installation folder.
+2. **Move** the four `catppuccin-[flavour]` folders into the `/themes` folder inside IDA's installation folder. This folder may be read-only, so ensure you have the necessary permissions.
+
+   If you prefer, you can also refer to [IDA's official documentation](https://hex-rays.com/products/ida/support/tutorials/themes/) for detailed instructions on adding themes.
 
 ## 🔌 Activation
 
