@@ -517,7 +517,7 @@ CustomIDAMemo
     qproperty-line-bg-highlight-7       : ${color-sapphire};/* highlighting background #7 */
     qproperty-line-bg-highlight-8       : ${color-subtext0};/* highlighting background #8 */
     qproperty-caret                     : ${color-text}; /* Caret (cursor) */
-    qproperty-line-pfx-current-item     : ${color-subtext0};/* Line prefix: Current item (transparent by default) */
+    /*qproperty-line-pfx-current-item     : ${color-subtext0};/* Line prefix: Current item (transparent by default) */
     qproperty-line-bgovl-current-line   : ${color-overlay1};/* current line background overlay */
     qproperty-line-bgovl-trace          : ${color-overlay2};/* Trace line background overlay */
     qproperty-line-bgovl-trace-ovl      : ${color-surface2};/* Second trace line background overlay */
@@ -630,54 +630,57 @@ TCpuRegs ui_label_t[os-dark-theme="true"]
 
 navband_t
 {
-    qproperty-lib-function : ${color-teal};
-    qproperty-function : ${color-sky};
+    qproperty-lib-function : ${color-sky};
+    qproperty-function : ${color-peach};
     qproperty-code : ${color-rosewater};
-    qproperty-data : ${color-subtext0};
-    qproperty-undefined : ${color-yellow};
+    qproperty-data : ${color-yellow};
+    qproperty-undefined : ${color-teal};
     qproperty-extern : ${color-pink};
     qproperty-lumina-function : ${color-green};
 
-    qproperty-hl-lib-function : ${color-sapphire};
-    qproperty-hl-function : ${color-sky};
-    qproperty-hl-code : ${color-rosewater};
-    qproperty-hl-data : ${color-flamingo};
-    qproperty-hl-undefined : ${color-teal};
-    qproperty-hl-extern : #7287fd;
-    qproperty-hl-lumina-function : ${color-green};
+    /* same colors as above but lightness turned up by 5% */
+    qproperty-hl-lib-function : rgb(8, 182, 251);
+    qproperty-hl-function : rgb(254, 116, 36);
+    qproperty-hl-code : rgb(225, 156, 140);
+    qproperty-hl-data : rgb(228, 154, 49);
+    qproperty-hl-undefined : rgb(26, 167, 175);
+    qproperty-hl-extern : rgb(237, 140, 211);
+    qproperty-hl-lumina-function : rgb(97, 206, 73);
 
     qproperty-hl-outline : ${color-pink};
 
-    qproperty-error : ${color-maroon};
-    qproperty-gap :${color-text};
+    qproperty-error : ${color-red};
+    qproperty-gap :${color-base};
     qproperty-cursor : ${color-yellow};
     qproperty-auto-analysis-cursor : ${color-peach};
 }
 
 navband_t[os-dark-theme="true"]
 {
-    qproperty-lib-function: ${color-teal};
-    qproperty-function: ${color-peach};
-    qproperty-code: ${color-red};
-    qproperty-data: ${color-subtext0};
-    qproperty-undefined: ${color-green};
-    qproperty-extern: ${color-maroon};
-    qproperty-lumina-function: ${color-green};
+    qproperty-lib-function : ${color-sky};
+    qproperty-function : ${color-peach};
+    qproperty-code : ${color-rosewater};
+    qproperty-data : ${color-yellow};
+    qproperty-undefined : ${color-teal};
+    qproperty-extern : ${color-pink};
+    qproperty-lumina-function : ${color-green};
+    
+    /* same colors as above but lightness turned up by 5% */
+    qproperty-hl-lib-function : rgb(8, 182, 251);
+    qproperty-hl-function : rgb(254, 116, 36);
+    qproperty-hl-code : rgb(225, 156, 140);
+    qproperty-hl-data : rgb(228, 154, 49);
+    qproperty-hl-undefined : rgb(26, 167, 175);
+    qproperty-hl-extern : rgb(237, 140, 211);
+    qproperty-hl-lumina-function : rgb(97, 206, 73);
 
-    qproperty-hl-lib-function: ${color-sapphire};
-    qproperty-hl-function: ${color-peach};
-    qproperty-hl-code: ${color-red};
-    qproperty-hl-data: ${color-crust};
-    qproperty-hl-undefined: ${color-yellow};
-    qproperty-hl-extern: ${color-pink};
-    qproperty-hl-lumina-function: ${color-green};
 
-    qproperty-hl-outline : ${color-sky};
+    qproperty-hl-outline : ${color-pink};
 
-    qproperty-error: ${color-red};
-    qproperty-gap:${color-text};
-    qproperty-cursor: ${color-green};
-    qproperty-auto-analysis-cursor: ${color-peach};
+    qproperty-error : ${color-red};
+    qproperty-gap :${color-base};
+    qproperty-cursor : ${color-yellow};
+    qproperty-auto-analysis-cursor : ${color-peach};
 }
 
 TChooser,
@@ -736,55 +739,56 @@ TextEdit {
 CustomIDAMemo {
   /* current line background overlay */
   qproperty-line-bgovl-current-line: rgba(220, 138, 120, 0.25); /*rosewater*/
-  qproperty-line-fg-default: ${color-sapphire};
-  qproperty-line-fg-regular-comment: ${color-overlay0};
-  qproperty-line-fg-repeatable-comment: ${color-overlay0};
+  qproperty-line-fg-default: ${color-overlay2};
+  qproperty-line-fg-regular-comment: ${color-pink};
+  qproperty-line-fg-repeatable-comment: ${color-mauve};
   qproperty-line-fg-automatic-comment: ${color-overlay0};
-  qproperty-line-fg-insn: ${color-red};
-  qproperty-line-fg-dummy-data-name: ${color-red};
-  qproperty-line-fg-regular-data-name: ${color-peach};
-  qproperty-line-fg-demangled-name: ${color-peach};
+  qproperty-line-fg-insn: ${color-mauve};
+  qproperty-line-fg-dummy-data-name: ${color-yellow};
+  qproperty-line-fg-regular-data-name: ${color-yellow};
+  qproperty-line-fg-demangled-name: ${color-flamingo};
   qproperty-line-fg-punctuation: ${color-sapphire};
   qproperty-line-fg-charlit-in-insn: ${color-green};
   qproperty-line-fg-strlit-in-insn: ${color-green};
   qproperty-line-fg-numlit-in-insn: ${color-peach};
   qproperty-line-fg-void-opnd: ${color-mauve};
-  qproperty-line-fg-code-xref: ${color-overlay0};
-  qproperty-line-fg-data-xref: ${color-yellow};
-  qproperty-line-fg-code-xref-to-tail: ${color-mauve};
-  qproperty-line-fg-data-xref-to-tail: ${color-peach};
+  qproperty-line-fg-code-xref: ${color-peach};
+  qproperty-line-fg-data-xref: ${color-overlay0};
+  qproperty-line-fg-code-xref-to-tail: ${color-flamingo};
+  qproperty-line-fg-data-xref-to-tail: ${color-teal};
   qproperty-line-fg-error: ${color-red};
   qproperty-line-fg-line-prefix: ${color-teal};
   qproperty-line-fg-opcode-byte: ${color-peach};
-  qproperty-line-fg-extra-line: ${color-peach};
+  qproperty-line-fg-extra-line: ${color-pink};
   qproperty-line-fg-alt-opnd: ${color-red};
-  qproperty-line-fg-hidden: ${color-overlay0};
+  qproperty-line-fg-hidden: ${color-blue};
   qproperty-line-fg-libfunc: ${color-peach};
-  qproperty-line-fg-locvar: ${color-mauve};
-  qproperty-line-fg-dummy-code-name: ${color-text};
-  qproperty-line-fg-asm-directive: ${color-peach};
-  qproperty-line-fg-macro: ${color-text};
+  qproperty-line-fg-locvar: ${color-green};
+  qproperty-line-fg-dummy-code-name: ${color-lavender};
+  qproperty-line-fg-asm-directive: ${color-teal};
+  qproperty-line-fg-macro: ${color-sky};
   qproperty-line-fg-strlit-in-data: ${color-green};
   qproperty-line-fg-charlit-in-data: ${color-green};
   qproperty-line-fg-numlit-in-data: ${color-peach};
-  qproperty-line-fg-keyword: ${color-mauve};
-  qproperty-line-fg-register-name: ${color-yellow};
+  qproperty-line-fg-keyword: ${color-subtext1};
+  qproperty-line-fg-register-name: ${color-maroon};
   qproperty-line-fg-import-name: ${color-mauve};
   qproperty-line-fg-segment-name: ${color-peach};
   qproperty-line-fg-dummy-unknown-name: ${color-red};
-  qproperty-line-fg-code-name: ${color-peach};
+  qproperty-line-fg-code-name: ${color-blue};
   qproperty-line-fg-unknown-name: ${color-yellow};
-  qproperty-line-fg-collapsed-line: ${color-mauve};
+  qproperty-line-fg-collapsed-line: ${color-yellow};
   qproperty-line-bg-default: ${color-base};
   qproperty-line-bg-selected: ${color-crust};
-  qproperty-line-pfx-libfunc: ${color-text};
-  qproperty-line-pfx-func: ${color-sapphire};
-  qproperty-line-pfx-insn: ${color-sky};
-  qproperty-line-pfx-data: ${color-peach};
-  qproperty-line-pfx-unexplored: ${color-maroon};
+  qproperty-line-pfx-libfunc: ${color-sapphire};
+  qproperty-line-pfx-func: ${color-overlay0};
+  qproperty-line-pfx-insn: ${color-red};
+  qproperty-line-pfx-data: ${color-subtext0};
+  qproperty-line-pfx-unexplored: ${color-teal};
   qproperty-line-pfx-extern: ${color-mauve};
-  qproperty-line-pfx-current-item: ${color-sapphire};
-  qproperty-line-pfx-current-line: ${color-teal};
+  qproperty-line-pfx-lumina: ${color-green};
+  /*qproperty-line-pfx-current-item: ${color-sapphire};*/
+  qproperty-line-pfx-current-line: ${color-peach};
   qproperty-line-bg-bpt-enabled: ${color-teal};
   qproperty-line-bg-bpt-disabled: ${color-text};
   qproperty-line-bg-bpt-unavailable: ${color-overlay0};
