@@ -630,54 +630,56 @@ TCpuRegs ui_label_t[os-dark-theme="true"]
 
 navband_t
 {
-    qproperty-lib-function : ${color-teal};
-    qproperty-function : ${color-sky};
+    qproperty-lib-function : ${color-sky};
+    qproperty-function : ${color-peach};
     qproperty-code : ${color-rosewater};
-    qproperty-data : ${color-subtext0};
-    qproperty-undefined : ${color-yellow};
+    qproperty-data : ${color-yellow};
+    qproperty-undefined : ${color-teal};
     qproperty-extern : ${color-pink};
     qproperty-lumina-function : ${color-green};
 
-    qproperty-hl-lib-function : ${color-sapphire};
-    qproperty-hl-function : ${color-sky};
-    qproperty-hl-code : ${color-rosewater};
-    qproperty-hl-data : ${color-flamingo};
-    qproperty-hl-undefined : ${color-teal};
-    qproperty-hl-extern : #7287fd;
-    qproperty-hl-lumina-function : ${color-green};
+    /* same colors as above but lightness turned up by 5% */
+    qproperty-hl-lib-function : rgb(172, 217, 226);
+    qproperty-hl-function : rgb(242, 175, 141);
+    qproperty-hl-code : rgb(247, 231, 227);
+    qproperty-hl-data : rgb(234, 210, 165);
+    qproperty-hl-undefined : rgb(147, 208, 199);
+    qproperty-hl-extern : rgb(247, 206, 236);
+    qproperty-hl-lumina-function : rgb(180, 216, 155);
 
     qproperty-hl-outline : ${color-pink};
 
-    qproperty-error : ${color-maroon};
-    qproperty-gap :${color-text};
+    qproperty-error : ${color-red};
+    qproperty-gap :${color-base};
     qproperty-cursor : ${color-yellow};
     qproperty-auto-analysis-cursor : ${color-peach};
 }
 
 navband_t[os-dark-theme="true"]
 {
-    qproperty-lib-function: ${color-teal};
-    qproperty-function: ${color-peach};
-    qproperty-code: ${color-red};
-    qproperty-data: ${color-subtext0};
-    qproperty-undefined: ${color-green};
-    qproperty-extern: ${color-maroon};
-    qproperty-lumina-function: ${color-green};
+    qproperty-lib-function : ${color-sky};
+    qproperty-function : ${color-peach};
+    qproperty-code : ${color-rosewater};
+    qproperty-data : ${color-yellow};
+    qproperty-undefined : ${color-teal};
+    qproperty-extern : ${color-pink};
+    qproperty-lumina-function : ${color-green};
 
-    qproperty-hl-lib-function: ${color-sapphire};
-    qproperty-hl-function: ${color-peach};
-    qproperty-hl-code: ${color-red};
-    qproperty-hl-data: ${color-crust};
-    qproperty-hl-undefined: ${color-yellow};
-    qproperty-hl-extern: ${color-pink};
-    qproperty-hl-lumina-function: ${color-green};
+    /* same colors as above but lightness turned up by 5% */
+    qproperty-hl-lib-function : rgb(172, 217, 226);
+    qproperty-hl-function : rgb(242, 175, 141);
+    qproperty-hl-code : rgb(247, 231, 227);
+    qproperty-hl-data : rgb(234, 210, 165);
+    qproperty-hl-undefined : rgb(147, 208, 199);
+    qproperty-hl-extern : rgb(247, 206, 236);
+    qproperty-hl-lumina-function : rgb(180, 216, 155);
 
-    qproperty-hl-outline : ${color-sky};
+    qproperty-hl-outline : ${color-pink};
 
-    qproperty-error: ${color-red};
-    qproperty-gap:${color-text};
-    qproperty-cursor: ${color-green};
-    qproperty-auto-analysis-cursor: ${color-peach};
+    qproperty-error : ${color-red};
+    qproperty-gap :${color-base};
+    qproperty-cursor : ${color-yellow};
+    qproperty-auto-analysis-cursor : ${color-peach};
 }
 
 TChooser,
