@@ -638,7 +638,6 @@ navband_t
     qproperty-extern : ${color-pink};
     qproperty-lumina-function : ${color-green};
 
-    /* same colors as above but lightness turned up by 5% */
     qproperty-hl-lib-function : rgb(172, 217, 226);
     qproperty-hl-function : rgb(242, 175, 141);
     qproperty-hl-code : rgb(247, 231, 227);
@@ -665,7 +664,6 @@ navband_t[os-dark-theme="true"]
     qproperty-extern : ${color-pink};
     qproperty-lumina-function : ${color-green};
 
-    /* same colors as above but lightness turned up by 5% */
     qproperty-hl-lib-function : rgb(172, 217, 226);
     qproperty-hl-function : rgb(242, 175, 141);
     qproperty-hl-code : rgb(247, 231, 227);
@@ -737,7 +735,7 @@ TextEdit {
 /* main color scheme */
 CustomIDAMemo {
   /* current line background overlay */
-  qproperty-line-bgovl-current-line: rgba(220, 138, 120, 0.25); /*rosewater*/
+  qproperty-line-bgovl-current-line: rgba(220, 138, 120, 0.1); /*rosewater*/
   qproperty-line-fg-default: ${color-overlay2};
   qproperty-line-fg-regular-comment: ${color-pink};
   qproperty-line-fg-repeatable-comment: ${color-mauve};
@@ -788,8 +786,8 @@ CustomIDAMemo {
   qproperty-line-pfx-lumina: ${color-green};
   /*qproperty-line-pfx-current-item: ${color-sapphire};*/
   qproperty-line-pfx-current-line: ${color-peach};
-  qproperty-line-bg-bpt-enabled: ${color-teal};
-  qproperty-line-bg-bpt-disabled: ${color-text};
+  qproperty-line-bg-bpt-enabled: rgba(231, 130, 132, 0.3); /*red*/
+  qproperty-line-bg-bpt-disabled: rgba(166, 209, 137, 0.3); /*green*/
   qproperty-line-bg-bpt-unavailable: ${color-overlay0};
   qproperty-graph-bg-top: ${color-crust};
   qproperty-graph-bg-bottom: ${color-crust};
@@ -808,7 +806,7 @@ CustomIDAMemo {
   qproperty-graph-edge-current: ${color-text};
   qproperty-line-fg-patched-bytes: ${color-mauve};
   qproperty-line-fg-unsaved-changes: ${color-teal};
-  qproperty-line-bg-highlight: rgba(220, 138, 120, 0.5); /*rosewater*/
+  qproperty-line-bg-highlight: rgba(234, 153, 156, 0.19); /*rosewater*/
   qproperty-line-bg-hint: ${color-mauve};
 }
 CustomIDAMemo[debugging="true"],
