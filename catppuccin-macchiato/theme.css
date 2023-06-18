@@ -27,6 +27,32 @@
 @def color-base #24273a;
 @def color-mantle #1e2030;
 @def color-crust  #181926;
+@def color-rosewater-rgba	rgba(244, 219, 214, 0.19)
+@def color-flamingo-rgba	rgba(240, 198, 198, 1);
+@def color-pink-rgba	rgba(245, 189, 230, 1);
+@def color-mauve-rgba	rgba(198, 160, 246, 1);
+@def color-red-rgba	rgba(237, 135, 150, 0.3);
+@def color-maroon-rgba	rgba(238, 153, 160, 1);
+@def color-peach-rgba	rgba(245, 169, 127, 1);
+@def color-yellow-rgba	rgba(238, 212, 159, 1);
+@def color-green-rgba	rgba(166, 218, 149, 0.3);
+@def color-teal-rgba	rgba(139, 213, 202, 1);
+@def color-sky-rgba	rgba(145, 215, 227, 1);
+@def color-sapphire-rgba	rgba(125, 196, 228, 1);
+@def color-blue-rgba	rgba(138, 173, 244, 1);
+@def color-lavender-rgba	rgba(183, 189, 248, 1);
+@def color-text-rgba	rgba(202, 211, 245, 1);
+@def color-subtext1-rgba	rgba(184, 192, 224, 1);
+@def color-subtext0-rgba	rgba(165, 173, 203, 1);
+@def color-overlay2-rgba	rgba(147, 154, 183, 1);
+@def color-overlay1-rgba	rgba(128, 135, 162, 1);
+@def color-overlay0-rgba	rgba(110, 115, 141, 1);
+@def color-surface2-rgba	rgba(91, 96, 120, 1);
+@def color-surface1-rgba	rgba(73, 77, 100, 1);
+@def color-surface0-rgba	rgba(54, 58, 79, 1);
+@def color-base-rgba	rgba(36, 39, 58, 1);
+@def color-mantle-rgba	rgba(30, 32, 48, 1);
+@def color-crust-rgba	rgba(24, 25, 38, 1);
 
 DockWidgetTitle
 {
@@ -735,7 +761,7 @@ TextEdit {
 /* main color scheme */
 CustomIDAMemo {
   /* current line background overlay */
-  qproperty-line-bgovl-current-line: rgba(220, 138, 120, 0.1); /*rosewater*/
+  qproperty-line-bgovl-current-line: ${color-rosewater-rgba}; /*rosewater*/
   qproperty-line-fg-default: ${color-overlay2};
   qproperty-line-fg-regular-comment: ${color-pink};
   qproperty-line-fg-repeatable-comment: ${color-mauve};
@@ -786,8 +812,8 @@ CustomIDAMemo {
   qproperty-line-pfx-lumina: ${color-green};
   /*qproperty-line-pfx-current-item: ${color-sapphire};*/
   qproperty-line-pfx-current-line: ${color-peach};
-  qproperty-line-bg-bpt-enabled: rgba(237, 135, 150, 0.3); /*red*/
-  qproperty-line-bg-bpt-disabled: rgba(166, 218, 149, 0.3); /*green*/
+  qproperty-line-bg-bpt-enabled: ${color-red-rgba};
+  qproperty-line-bg-bpt-disabled: ${color-green-rgba};
   qproperty-line-bg-bpt-unavailable: ${color-overlay0};
   qproperty-graph-bg-top: ${color-crust};
   qproperty-graph-bg-bottom: ${color-crust};
@@ -806,7 +832,7 @@ CustomIDAMemo {
   qproperty-graph-edge-current: ${color-text};
   qproperty-line-fg-patched-bytes: ${color-mauve};
   qproperty-line-fg-unsaved-changes: ${color-teal};
-  qproperty-line-bg-highlight: rgba(238, 153, 160, 0.19); /*rosewater*/
+  qproperty-line-bg-highlight: ${color-rosewater-rgba}; /*rosewater*/
   qproperty-line-bg-hint: ${color-mauve};
 }
 CustomIDAMemo[debugging="true"],
