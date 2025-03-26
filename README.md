@@ -39,7 +39,7 @@
 1. **Download** the GitHub repository as a .zip file and unzip it. Alternatively, you can **clone** the repository using the following command in your terminal:
 
    ```bash
-   git clone https://github.com/ValentinTT/ida-debugger.git
+   git clone https://github.com/catppuccin/ida-debugger.git
    ```
 
 2. **Move** the four `catppuccin-[flavour]` folders into the `/themes` folder inside IDA's installation folder. This folder may be read-only, so ensure you have the necessary permissions.
@@ -60,8 +60,8 @@
 
     - **Windows:**
 
-      - 32-bit version: `C:\Program Files\IDA-{version}\`
-      - 64-bit version: `C:\Program Files (x86)\IDA-{version}\`
+      - 64-bit version: `C:\Program Files\IDA Professional {version}\`
+      - 32-bit version: `C:\Program Files (x86)\IDA Professional {version}\`
 
     - **Linux:**
 
