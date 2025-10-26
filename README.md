@@ -75,7 +75,7 @@
 ## 💝 Thanks to
 
 - [ValentinTT](https://github.com/ValentinTT)
-- [autumn](https://github.com/autumncpp)
+- [autumn](https://github.com/naldrv)
 
 &nbsp;
 
