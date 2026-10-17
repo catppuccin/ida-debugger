@@ -72,6 +72,15 @@
 
     Replace `{version}` with the specific version number of IDA Pro you have installed.
 
+## Development
+
+The four IDA theme stylesheets are generated using [Whiskers](https://github.com/catppuccin/whiskers).
+To regenerate them from the repository root, run:
+
+```sh
+whiskers ida-debugger.tera
+```
+
 ## 💝 Thanks to
 
 - [ValentinTT](https://github.com/ValentinTT)
