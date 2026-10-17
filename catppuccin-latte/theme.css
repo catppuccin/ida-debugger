@@ -1,4 +1,3 @@
-
 @importtheme "_base";
 
 @def color-rosewater #dc8a78;
@@ -27,32 +26,34 @@
 @def color-base #eff1f5;
 @def color-mantle #e6e9ef;
 @def color-crust #dce0e8;
-@def color-rosewater-rgba	rgba(220, 138, 120, 0.19);
-@def color-flamingo-rgba	rgba(221, 120, 120, 1);
-@def color-pink-rgba	rgba(234, 118, 203, 1);
-@def color-mauve-rgba	rgba(136, 57, 239, 1);
-@def color-red-rgba	rgba(210, 15, 57, 0.3);
-@def color-maroon-rgba	rgba(230, 69, 83, 1);
-@def color-peach-rgba	rgba(254, 100, 11, 1);
-@def color-yellow-rgba	rgba(223, 142, 29, 1);
-@def color-green-rgba	rgba(64, 160, 43, 0.3);
-@def color-teal-rgba	rgba(23, 146, 153, 1);
-@def color-sky-rgba	rgba(4, 165, 229, 1);
-@def color-sapphire-rgba	rgba(32, 159, 181, 1);
-@def color-blue-rgba	rgba(30, 102, 245, 1);
-@def color-lavender-rgba	rgba(114, 135, 253, 1);
-@def color-text-rgba	rgba(76, 79, 105, 1);
-@def color-subtext1-rgba	rgba(92, 95, 119, 1);
-@def color-subtext0-rgba	rgba(108, 111, 133, 1);
-@def color-overlay2-rgba	rgba(124, 127, 147, 1);
-@def color-overlay1-rgba	rgba(140, 143, 161, 1);
-@def color-overlay0-rgba	rgba(156, 160, 176, 1);
-@def color-surface2-rgba	rgba(172, 176, 190, 1);
-@def color-surface1-rgba	rgba(188, 192, 204, 1);
-@def color-surface0-rgba	rgba(204, 208, 218, 1);
-@def color-base-rgba	rgba(239, 241, 245, 1);
-@def color-mantle-rgba	rgba(230, 233, 239, 1);
-@def color-crust-rgba	rgba(220, 224, 232, 1);
+@def color-rosewater-rgba	rgba(220, 138, 120, 0.19);	
+@def color-flamingo-rgba	rgba(221, 120, 120, 1);	
+@def color-pink-rgba	rgba(234, 118, 203, 1);	
+@def color-mauve-rgba	rgba(136, 57, 239, 1);	
+@def color-red-rgba	rgba(210, 15, 57, 0.3);	
+@def color-maroon-rgba	rgba(230, 69, 83, 1);	
+@def color-peach-rgba	rgba(254, 100, 11, 1);	
+@def color-yellow-rgba	rgba(223, 142, 29, 1);	
+@def color-green-rgba	rgba(64, 160, 43, 0.3);	
+@def color-teal-rgba	rgba(23, 146, 153, 1);	
+@def color-sky-rgba	rgba(4, 165, 229, 1);	
+@def color-sapphire-rgba	rgba(32, 159, 181, 1);	
+@def color-blue-rgba	rgba(30, 102, 245, 1);	
+@def color-lavender-rgba	rgba(114, 135, 253, 1);	
+@def color-text-rgba	rgba(76, 79, 105, 1);	
+@def color-subtext1-rgba	rgba(92, 95, 119, 1);	
+@def color-subtext0-rgba	rgba(108, 111, 133, 1);	
+@def color-overlay2-rgba	rgba(124, 127, 147, 1);	
+@def color-overlay1-rgba	rgba(140, 143, 161, 1);	
+@def color-overlay0-rgba	rgba(156, 160, 176, 1);	
+@def color-surface2-rgba	rgba(172, 176, 190, 1);	
+@def color-surface1-rgba	rgba(188, 192, 204, 1);	
+@def color-surface0-rgba	rgba(204, 208, 218, 1);	
+@def color-base-rgba	rgba(239, 241, 245, 1);	
+@def color-mantle-rgba	rgba(230, 233, 239, 1);	
+@def color-crust-rgba	rgba(220, 224, 232, 1);	
+
+
 
 DockWidgetTitle
 {
@@ -689,7 +690,7 @@ navband_t[os-dark-theme="true"]
     qproperty-undefined : ${color-teal};
     qproperty-extern : ${color-pink};
     qproperty-lumina-function : ${color-green};
-    
+
     qproperty-hl-lib-function : rgb(8, 182, 251);
     qproperty-hl-function : rgb(254, 116, 36);
     qproperty-hl-code : rgb(225, 156, 140);
@@ -697,7 +698,6 @@ navband_t[os-dark-theme="true"]
     qproperty-hl-undefined : rgb(26, 167, 175);
     qproperty-hl-extern : rgb(237, 140, 211);
     qproperty-hl-lumina-function : rgb(97, 206, 73);
-
 
     qproperty-hl-outline : ${color-pink};
 

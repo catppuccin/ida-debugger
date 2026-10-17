@@ -1,17 +1,16 @@
-
 @importtheme "_base";
 
-@def color-rosewater  #f5e0dc;
+@def color-rosewater #f5e0dc;
 @def color-flamingo #f2cdcd;
 @def color-pink #f5c2e7;
-@def color-mauve  #cba6f7;
-@def color-red  #f38ba8;
+@def color-mauve #cba6f7;
+@def color-red #f38ba8;
 @def color-maroon #eba0ac;
-@def color-peach  #fab387;
+@def color-peach #fab387;
 @def color-yellow #f9e2af;
-@def color-green  #a6e3a1;
+@def color-green #a6e3a1;
 @def color-teal #94e2d5;
-@def color-sky  #89dceb;
+@def color-sky #89dceb;
 @def color-sapphire #74c7ec;
 @def color-blue #89b4fa;
 @def color-lavender #b4befe;
@@ -26,33 +25,35 @@
 @def color-surface0 #313244;
 @def color-base #1e1e2e;
 @def color-mantle #181825;
-@def color-crust  #11111b;
-@def color-rosewater-rgba	rgba(245, 224, 220, 0.19);
-@def color-flamingo-rgba	rgba(242, 205, 205, 1);
-@def color-pink-rgba	rgba(245, 194, 231, 1);
-@def color-mauve-rgba	rgba(203, 166, 247, 1);
-@def color-red-rgba	rgba(243, 139, 168, 0.3);
-@def color-maroon-rgba	rgba(235, 160, 172, 1);
-@def color-peach-rgba	rgba(250, 179, 135, 1);
-@def color-yellow-rgba	rgba(249, 226, 175, 1);
-@def color-green-rgba	rgba(166, 227, 161, 0.3);
-@def color-teal-rgba	rgba(148, 226, 213, 1);
-@def color-sky-rgba	rgba(137, 220, 235, 1);
-@def color-sapphire-rgba	rgba(116, 199, 236, 1);
-@def color-blue-rgba	rgba(137, 180, 250, 1);
-@def color-lavender-rgba	rgba(180, 190, 254, 1);
-@def color-text-rgba	rgba(205, 214, 244, 1);
-@def color-subtext1-rgba	rgba(186, 194, 222, 1);
-@def color-subtext0-rgba	rgba(166, 173, 200, 1);
-@def color-overlay2-rgba	rgba(147, 153, 178, 1);
-@def color-overlay1-rgba	rgba(127, 132, 156, 1);
-@def color-overlay0-rgba	rgba(108, 112, 134, 1);
-@def color-surface2-rgba	rgba(88, 91, 112, 1);
-@def color-surface1-rgba	rgba(69, 71, 90, 1);
-@def color-surface0-rgba	rgba(49, 50, 68, 1);
-@def color-base-rgba	rgba(30, 30, 46, 1);
-@def color-mantle-rgba	rgba(24, 24, 37, 1);
-@def color-crust-rgba	rgba(17, 17, 27, 1);
+@def color-crust #11111b;
+@def color-rosewater-rgba	rgba(245, 224, 220, 0.19);	
+@def color-flamingo-rgba	rgba(242, 205, 205, 1);	
+@def color-pink-rgba	rgba(245, 194, 231, 1);	
+@def color-mauve-rgba	rgba(203, 166, 247, 1);	
+@def color-red-rgba	rgba(243, 139, 168, 0.3);	
+@def color-maroon-rgba	rgba(235, 160, 172, 1);	
+@def color-peach-rgba	rgba(250, 179, 135, 1);	
+@def color-yellow-rgba	rgba(249, 226, 175, 1);	
+@def color-green-rgba	rgba(166, 227, 161, 0.3);	
+@def color-teal-rgba	rgba(148, 226, 213, 1);	
+@def color-sky-rgba	rgba(137, 220, 235, 1);	
+@def color-sapphire-rgba	rgba(116, 199, 236, 1);	
+@def color-blue-rgba	rgba(137, 180, 250, 1);	
+@def color-lavender-rgba	rgba(180, 190, 254, 1);	
+@def color-text-rgba	rgba(205, 214, 244, 1);	
+@def color-subtext1-rgba	rgba(186, 194, 222, 1);	
+@def color-subtext0-rgba	rgba(166, 173, 200, 1);	
+@def color-overlay2-rgba	rgba(147, 153, 178, 1);	
+@def color-overlay1-rgba	rgba(127, 132, 156, 1);	
+@def color-overlay0-rgba	rgba(108, 112, 134, 1);	
+@def color-surface2-rgba	rgba(88, 91, 112, 1);	
+@def color-surface1-rgba	rgba(69, 71, 90, 1);	
+@def color-surface0-rgba	rgba(49, 50, 68, 1);	
+@def color-base-rgba	rgba(30, 30, 46, 1);	
+@def color-mantle-rgba	rgba(24, 24, 37, 1);	
+@def color-crust-rgba	rgba(17, 17, 27, 1);	
+
+
 
 DockWidgetTitle
 {
@@ -543,7 +544,7 @@ CustomIDAMemo
     qproperty-line-bg-highlight-7       : ${color-sapphire};/* highlighting background #7 */
     qproperty-line-bg-highlight-8       : ${color-subtext0};/* highlighting background #8 */
     qproperty-caret                     : ${color-text}; /* Caret (cursor) */
-    /*qproperty-line-pfx-current-item     : ${color-subtext0};*//* Line prefix: Current item (transparent by default) */
+    /*qproperty-line-pfx-current-item     : ${color-subtext0};/* Line prefix: Current item (transparent by default) */
     qproperty-line-bgovl-current-line   : ${color-overlay1};/* current line background overlay */
     qproperty-line-bgovl-trace          : ${color-overlay2};/* Trace line background overlay */
     qproperty-line-bgovl-trace-ovl      : ${color-surface2};/* Second trace line background overlay */
@@ -812,8 +813,8 @@ CustomIDAMemo {
   qproperty-line-pfx-lumina: ${color-green};
   /*qproperty-line-pfx-current-item: ${color-sapphire};*/
   qproperty-line-pfx-current-line: ${color-peach};
-  qproperty-line-bg-bpt-enabled: ${color-red-rgba};
-  qproperty-line-bg-bpt-disabled: ${color-green-rgba};
+  qproperty-line-bg-bpt-enabled: ${color-red-rgba}; 
+  qproperty-line-bg-bpt-disabled: ${color-green-rgba}; 
   qproperty-line-bg-bpt-unavailable: ${color-overlay0};
   qproperty-graph-bg-top: ${color-crust};
   qproperty-graph-bg-bottom: ${color-crust};
